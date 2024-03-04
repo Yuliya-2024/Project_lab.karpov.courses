@@ -1,0 +1,26 @@
+Test steps:
+    - count metric ctr_control, it shows the original average CTR in the control group
+    - count new metric "linearized_likes" by users:
+        - views by user * original average CTR in the control group = part of views
+        - original count of likes by users - part of views = linearized_likes
+
+
+
+New linearized metric meaning:
+	- for example, original views= 10, likes= 3; became views= 2, likes= 1
+	- original views= 20, likes= 15; became views= 4, likes= 11
+	- original views= 20, likes= 1; became views= 4, likes= -3
+
+  - Therefore, the new linearized metric can show conversion (high linearized_likes - high likes relatively views, linearized_likes ~ 0 - likes metric less than average value, linearized_likes < 0 - high views and few likes)
+
+
+
+Test meaning:
+- if the test didn't show the difference between the original like metric in the control group and the linearized like metric in the test group it means that groups have equal users who often like posts and who just views
+- if test did show the difference, some group has more number of users who more often like posts
+
+
+
+Conclusion:
+    - between groups 0 and 3 pvalue decreased - the assertion that there are statistical differences has been strengthened
+    - between groups 1 and 2 impossible to make ttest, we will make the bucket ttest - pvalue decreased, that is the assertion that there are statistical differences has been strengthened

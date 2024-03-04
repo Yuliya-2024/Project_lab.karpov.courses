@@ -1,0 +1,63 @@
+First causal impact analysis
+
+1. Likes, Views: metric growth is visible during the campaign
+2. Users_feed (DAU): no increase detected
+	2.1. including new_feed_users: no increase detected
+3. Users_mess: looks like the campaign which should influence on feed metrics led to an increase in messenger service audience
+4. UsersWithLikes_share: during campaign share of active audience, which liked post at least once a day, increasing
+5. Posts: there is an increase in viewing old posts during the campaign period
+	5.1. including new_posts: no visible effect in the increase viewing new posts
+6. CTR: minimal effect, unclear, does it influenced by campaign or not
+7. ER: audience engagement increased during the campaign period
+
+
+There is no long-term effect from the campaign, some metrics increase just at flash mob time.
+The campaign had a significant impact on audience activity, but no influence on users amount (regular and new).
+
+
+
+
+
+Causal impact analysis with trend
+
+1. Likes, Views: the metric growth is still visible
+2. Users_feed (DAU): with trend it seems like metric decrease
+	2.1. including new_feed_users: but amount of new users a few higher than expected
+3. Users_mess: flash mob didn't influence on amount of messenger DAU
+4. UsersWithLikes_share: during the campaign some users who only viewed posts become to do like (but only during the campaign), the increase in this metric is extremely small
+5. Posts: there is an increase in viewing old posts during the campaign period
+	5.1. including new_posts: no visible effect
+6. CTR: no visible effect
+7. ER: audience engagement increased during the campaign period
+
+
+With trend CausalImpact model shows other results. 
+For example, we can say that:
+- campaign do not influence on amount of users; amount of new users has a few increase, but we cannot correlate it with flash mob with 100% probability
+- share of users with at least one liked post has a few increase, but this increase is so tiny that we cannot be sure in campaign influence
+- CTR has no increase detected despite the activity increase (likes frequency didn't growth)
+
+
+
+
+
+Causal impact analysis with trend and second predict metric
+
+1. Amount of active users and new users are not influenced by campaign
+2. Same, share of users with at least one like are not increase
+3. Same, CTR are not increase
+4. Same, new posts amount are not increase
+
+We can say for sure that: users activity and their ER are increase during the campaign, but amount of users and creating of new content are not increase at all. 
+
+
+
+
+
+Conclusion: 
+- there was no long-term effect from the flash mob, 
+- the audience was pleased with the activity and took part in it, but it didn't inspire to save this level for a longer time
+- apparently, users are already have a habit with this activity level and marketing campaign will not effect
+- analytic offer to increase valid auditory, it can make more contents and more activity
+
+

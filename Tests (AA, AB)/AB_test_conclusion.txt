@@ -1,0 +1,47 @@
+Conclusions:
+
+T-test:
+    - test results show that the average values in the two groups don't differ statistically - False
+    - distribution of avg. CTRs show that the test group has a bimodal distribution => T-test cannot correctly evaluate the results
+    
+Mann-Whitney test:
+    - test results show (only by pvalue) that the avg. values in samples are different - True
+    - test checks equality of distributions - it is not equal => H1 is correct
+    - test cannot show does avg. values really different or not, that's why we should use an additional method
+    
+T-test smoothed CTR:
+    - test results show that statistically the average values in two groups don't differ - False
+    - distribution of avg. smoothed CTRs show that it has a difference (test group win)
+    - can use this method as an addition to show that only just with a smoothed metric the test group seems more effective
+        
+Poisson bootstrap:
+    - distribution of avg. show that the test group avgs beveled to the left side relatively the control group avgs, i.е. on the average, test users showed the worst CTR result
+    - test looks like the reality at this moment, could use it like an additional method
+    
+Bucket Conversion Method:
+    - test results show that the average values in two groups do differ statistically - True
+    - the histogram show that most buckets in the control group have avg. CTR about 21% and test group - about 19-20%
+    - the difference is insignificant, but the histogram show that in the control group most CTRs are highest
+    - the method works correctly
+    
+    
+
+
+Choice of method:
+    - Mann-Whitney test show that the control and the test group values distribution differ from each other
+    - bootstrap and bucket are the same and show that avgs distribution of CTRs have just a slight differences between the control group side
+    - smoothed T-test show that if you drop tails from the groups' distributions, then the test group will show better results => test group has more anomalies, like a low count of likes and views (it can show the highest CTR, but it will be unrelevant)
+
+    
+
+
+The А/В-test results:
+    - test group users are divided: someone has more likes, someone less
+    - it's also possible that users in the test group don't like a new recommendation system and now they spend less time in feed service (they often likes, but have less views - CTR high)
+    - because the new system implies users view posts which were liked by similar users, we can assume that CTRs decline show that similar users don't have similar interests
+    - CTRs in the test group have more decrease than in the control group
+
+
+
+
+Recommendation: don't apply Campaign №2

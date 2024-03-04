@@ -1,0 +1,48 @@
+Task for developers: to solve the problem with application freezing
+Analytics task: help developers with server load prediction
+
+
+Messenger:
+All the time messenger activity is total linear and haven't trend. Let's evaluate different models to make better metric predict.
+
+Evaluated models:
+1. Obviously, users activity has a linear zero trend; model accuracy is good
+2. The prediction is same, but model accuracy is worst
+3. The prediction is same, but model accuracy is in the middle level
+
+Conclusion: 
+- the load is stable and does not increase (active users amount have a growth trend, but average activity has decrease, as a result, the total activity does not change)
+- expected server load through a month - near 13 000 messages per day
+
+
+
+Feed:
+The active users amount is growing faster than their total activity
+
+Evaluated models:
+1. Simple models:
+   linear model better than loglinear (linear model has worst test accuracy and wider confidence interval)
+2. Model with trend and regressor:
+   totally same
+3. Model with trend, regressor and anomaly:
+   totally same
+
+The best prediction model is loglinear simple model
+
+Conclusion: 
+- the server load is increasing
+- total activity has growth trend, but is slowing
+- expected server load through a month - near 800 000 clicks per day
+
+
+
+
+
+Developers should optimaze only feed server params
+
+
+
+
+
+
+
